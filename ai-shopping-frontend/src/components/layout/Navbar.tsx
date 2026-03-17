@@ -9,9 +9,13 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            AI Shopper
-          </Link>
+         <Link
+  href="/"
+  className="text-2xl font-bold text-sky-400"
+>
+  AI Shopper
+</Link>
+
 
           {/* Navigation Links */}
           <div className="hidden md:flex space-x-8">
@@ -36,17 +40,19 @@ export default function Navbar() {
             {/* Auth Buttons */}
             <div className="flex items-center space-x-2">
               <Link
-                href="/auth/login"
-                className="px-4 py-2 text-sm text-blue-600 hover:text-blue-800"
-              >
-                Login
-              </Link>
-              <Link
-                href="/auth/register"
-                className="px-4 py-2 text-sm bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700"
-              >
-                Sign Up
-              </Link>
+  href="/auth/login"
+  className="px-4 py-2 text-sm text-sky-400 hover:text-sky-500"
+>
+  Login
+</Link>
+
+             <Link
+  href="/auth/register"
+  className="px-4 py-2 text-sm bg-sky-400 text-white rounded-lg hover:bg-sky-500"
+>
+  Sign Up
+</Link>
+
             </div>
           </div>
         </div>

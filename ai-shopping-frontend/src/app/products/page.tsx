@@ -53,21 +53,16 @@ export default function ProductDetailPage() {
             </p>
 
             {/* Buttons */}
-           <div className="space-y-2">
-  <button
-    style={{ backgroundColor: "#B9E1F9", color: "#1F2937" }}
-    className="w-full py-2.5 text-sm rounded"
-  >
+      <div className="space-y-2">
+  <button className="w-full bg-sky-300 text-gray-900 py-2.5 text-sm rounded hover:bg-sky-400">
     Add to Cart
   </button>
 
-  <button
-    style={{ backgroundColor: "#F6F0F8", color: "#1F2937" }}
-    className="w-full py-2.5 text-sm rounded"
-  >
+  <button className="w-full bg-pink-100 text-gray-900 py-2.5 text-sm rounded hover:bg-pink-200">
     Ask AI about this item
   </button>
 </div>
+
 
 
           </div>
@@ -104,47 +99,83 @@ export default function ProductDetailPage() {
           </div>
         </div>
 
-        {/* Similar Items */}
-        <div className="mt-12">
-          <h2 className="text-lg font-medium text-gray-800 mb-6">Similar items based on your taste</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {/* Item 1 */}
-            <div className="border border-gray-100 p-3">
-              <div className="h-32 bg-gray-50 mb-2"></div>
-              <h3 className="text-sm font-medium">Ceramic Pour Over Set</h3>
-              <div className="flex items-center mt-1">
-                <span className="text-green-600 text-xs">🟢 4.8</span>
-                <span className="text-gray-400 text-xs ml-1">(84)</span>
-              </div>
-              <p className="text-sm font-medium mt-1">$45.00</p>
-            </div>
+     {/* Similar Items */}
+<div className="mt-12">
+  <h2 className="text-lg font-medium text-gray-800 mb-6">
+    Similar items based on your taste
+  </h2>
 
-            {/* Item 2 */}
-            <div className="border border-gray-100 p-3">
-              <div className="h-32 bg-gray-50 mb-2"></div>
-              <h3 className="text-sm font-medium">Espresso Cup Duo</h3>
-              <div className="flex items-center mt-1">
-                <span className="text-green-600 text-xs">🟢 4.9</span>
-                <span className="text-gray-400 text-xs ml-1">(210)</span>
-              </div>
-              <p className="text-sm font-medium mt-1">$28.00</p>
-            </div>
-
-            {/* Item 3 */}
-            <div className="border border-gray-100 p-3">
-              <div className="h-32 bg-gray-50 mb-2"></div>
-              <h3 className="text-sm font-medium">Precision Gooseneck Kettle</h3>
-              <div className="flex items-center mt-1">
-                <span className="text-green-600 text-xs">🟢 4.7</span>
-                <span className="text-gray-400 text-xs ml-1">(156)</span>
-              </div>
-              <p className="text-sm font-medium mt-1">$65.00</p>
-            </div>
-          </div>
-        </div>
+  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+    {/* Item 1 */}
+    <div className="border border-gray-100 p-3">
+      <div className="w-full h-44 mb-2 overflow-hidden rounded-lg bg-gray-50">
+        <img
+          src="https://static.vecteezy.com/system/resources/thumbnails/072/886/229/small/white-mug-on-pink-background-blank-coffee-cup-template-customizable-photo.jpg"
+          alt="Mug"
+          className="w-full h-full object-cover"
+        />
       </div>
+      <h3 className="text-sm font-medium">Espresso Cup Duo</h3>
+      <div className="flex items-center mt-1">
+        <span className="text-green-600 text-xs">🟢 4.9</span>
+        <span className="text-gray-400 text-xs ml-1">(210)</span>
+      </div>
+      <p className="text-sm font-medium mt-1">$28.00</p>
+    </div>
 
+    {/* Item 2 */}
+    <div className="border border-gray-100 p-3">
+      <div className="w-full h-44 mb-2 overflow-hidden rounded-lg bg-gray-50">
+        <img
+          src="https://static.vecteezy.com/system/resources/thumbnails/072/886/229/small/white-mug-on-pink-background-blank-coffee-cup-template-customizable-photo.jpg"
+          alt="Mug"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <h3 className="text-sm font-medium">Espresso Cup Duo</h3>
+      <div className="flex items-center mt-1">
+        <span className="text-green-600 text-xs">🟢 4.9</span>
+        <span className="text-gray-400 text-xs ml-1">(210)</span>
+      </div>
+      <p className="text-sm font-medium mt-1">$28.00</p>
+    </div>
+{/* Item 2 */}
+    <div className="border border-gray-100 p-3">
+      <div className="w-full h-44 mb-2 overflow-hidden rounded-lg bg-gray-50">
+        <img
+          src="https://static.vecteezy.com/system/resources/thumbnails/072/886/229/small/white-mug-on-pink-background-blank-coffee-cup-template-customizable-photo.jpg"
+          alt="Mug"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <h3 className="text-sm font-medium">Espresso Cup Duo</h3>
+      <div className="flex items-center mt-1">
+        <span className="text-green-600 text-xs">🟢 4.9</span>
+        <span className="text-gray-400 text-xs ml-1">(210)</span>
+      </div>
+      <p className="text-sm font-medium mt-1">$28.00</p>
+    </div>
+    {/* Item 3 */}
+    <div className="border border-gray-100 p-3">
+      <div className="w-full h-44 mb-2 overflow-hidden rounded-lg bg-gray-50">
+        <img
+          src="https://static.vecteezy.com/system/resources/thumbnails/072/886/229/small/white-mug-on-pink-background-blank-coffee-cup-template-customizable-photo.jpg"
+          alt="Precision Kettle"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <h3 className="text-sm font-medium">Precision Gooseneck Kettle</h3>
+      <div className="flex items-center mt-1">
+        <span className="text-green-600 text-xs">🟢 4.7</span>
+        <span className="text-gray-400 text-xs ml-1">(156)</span>
+      </div>
+      <p className="text-sm font-medium mt-1">$65.00</p>
+    </div>
+
+    {/* Add more items as needed */}
+  </div>
+</div>
+</div>
       {/* Chat Assistant */}
       <div className="fixed bottom-4 right-4 w-72 bg-white rounded-lg shadow-lg border border-gray-100">
         <div className="p-3 border-b border-gray-100">
@@ -154,9 +185,12 @@ export default function ProductDetailPage() {
           <div className="bg-gray-50 rounded-lg p-2 mb-2 max-w-[80%]">
             <p className="text-xs text-gray-600">Hi there! Looking for anything specific today?</p>
           </div>
-          <div className="bg-gray-800 text-white rounded-lg p-2 mb-2 ml-auto max-w-[80%]">
-            <p className="text-xs">I need a gift for a coffee lover, under $50.</p>
-          </div>
+          <div className="bg-sky-400 text-gray-900 rounded-lg p-2 mb-2 ml-auto max-w-[80%]">
+  <p className="text-xs">
+    I need a gift for a coffee lover, under $50.
+  </p>
+</div>
+
           <div className="bg-gray-50 rounded-lg p-2 max-w-[80%]">
             <p className="text-xs text-gray-600">I can help with that! We have some great artisan mugs and premium beans. Want to see one?</p>
           </div>
@@ -166,5 +200,6 @@ export default function ProductDetailPage() {
         </div>
       </div>
     </div>
+    
   );
 }
