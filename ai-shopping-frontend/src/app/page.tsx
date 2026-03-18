@@ -1,8 +1,7 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Home() {
-  // Product data for different categories
+  // 23 products with matching IDs for detail page
   const featuredProducts = [
     {
       id: 1,
@@ -11,267 +10,310 @@ export default function Home() {
       rating: 4.9,
       reviews: 120,
       price: 24.00,
-      image: "[Mug Image]"
+      image: "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=400&h=400&fit=crop"
     },
     {
       id: 2,
+      name: "French Press Coffee Maker",
+      category: "Kitchen",
+      rating: 4.7,
+      reviews: 89,
+      price: 34.99,
+      image: "https://images.unsplash.com/photo-1564135624576-c5c88640f235?w=400&h=400&fit=crop"
+    },
+    {
+      id: 3,
+      name: "Stainless Steel Cookware Set",
+      category: "Kitchen",
+      rating: 4.8,
+      reviews: 234,
+      price: 189.99,
+      image: "https://images.unsplash.com/photo-1584990347447-9153a4f8e9c6?w=400&h=400&fit=crop"
+    },
+    {
+      id: 4,
+      name: "Chef's Knife Set",
+      category: "Kitchen",
+      rating: 4.9,
+      reviews: 156,
+      price: 79.99,
+      image: "https://images.unsplash.com/photo-1593617999960-25fa2d1faca4?w=400&h=400&fit=crop"
+    },
+    {
+      id: 5,
+      name: "Non-Stick Frying Pan",
+      category: "Kitchen",
+      rating: 4.6,
+      reviews: 312,
+      price: 29.99,
+      image: "https://images.unsplash.com/photo-1625943553852-781c6dd46faa?w=400&h=400&fit=crop"
+    },
+    {
+      id: 6,
+      name: "Glass Food Storage Set",
+      category: "Kitchen",
+      rating: 4.7,
+      reviews: 445,
+      price: 39.99,
+      image: "https://images.unsplash.com/photo-1607427362377-08e7649d6b8e?w=400&h=400&fit=crop"
+    },
+    {
+      id: 7,
+      name: "Electric Kettle",
+      category: "Kitchen",
+      rating: 4.8,
+      reviews: 189,
+      price: 49.99,
+      image: "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&h=400&fit=crop"
+    },
+    {
+      id: 8,
+      name: "Wooden Cutting Board",
+      category: "Kitchen",
+      rating: 4.8,
+      reviews: 267,
+      price: 34.99,
+      image: "https://images.unsplash.com/photo-1620987278429-ab178d6eb547?w=400&h=400&fit=crop"
+    },
+    {
+      id: 9,
+      name: "KitchenAid Stand Mixer",
+      category: "Kitchen",
+      rating: 4.9,
+      reviews: 678,
+      price: 349.99,
+      image: "https://images.unsplash.com/photo-1585515320310-259814833e62?w=400&h=400&fit=crop"
+    },
+    {
+      id: 10,
+      name: "Spice Rack Set",
+      category: "Kitchen",
+      rating: 4.5,
+      reviews: 98,
+      price: 24.99,
+      image: "https://images.unsplash.com/photo-1537206568673-2ecbed8a9145?w=400&h=400&fit=crop"
+    },
+    {
+      id: 11,
       name: "Lumina Desk Lamp",
       category: "Electronics",
       rating: 4.8,
       reviews: 89,
       price: 89.00,
-      image: "[Lamp Image]"
+      image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=400&h=400&fit=crop"
     },
     {
-      id: 3,
-      name: "Everyday Canvas Tote",
-      category: "Fashion",
-      rating: 4.7,
-      reviews: 234,
-      price: 35.00,
-      image: "[Tote Image]"
-    },
-    {
-      id: 4,
-      name: "Premium Leather Sneakers",
-      category: "Shoes",
-      rating: 4.8,
-      reviews: 156,
-      price: 79.99,
-      image: "[Shoes Image]"
-    },
-    {
-      id: 5,
+      id: 12,
       name: "Smart Watch Series 5",
       category: "Electronics",
       rating: 4.6,
       reviews: 312,
       price: 199.99,
-      image: "[Watch Image]"
+      image: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=400&h=400&fit=crop"
     },
     {
-      id: 6,
-      name: "Cotton Hoodie",
-      category: "Clothing",
+      id: 13,
+      name: "Wireless Headphones",
+      category: "Electronics",
+      rating: 4.8,
+      reviews: 445,
+      price: 79.99,
+      image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop"
+    },
+    {
+      id: 14,
+      name: "Bluetooth Speaker",
+      category: "Electronics",
+      rating: 4.7,
+      reviews: 234,
+      price: 59.99,
+      image: "https://images.unsplash.com/photo-1589256469067-ea99122bbdc4?w=400&h=400&fit=crop"
+    },
+    {
+      id: 15,
+      name: "Tablet 10-inch",
+      category: "Electronics",
       rating: 4.5,
+      reviews: 156,
+      price: 299.99,
+      image: "https://images.unsplash.com/photo-1544244011-0ccb3c9f9f6c?w=400&h=400&fit=crop"
+    },
+    {
+      id: 16,
+      name: "4K Drone",
+      category: "Electronics",
+      rating: 4.8,
       reviews: 89,
-      price: 45.99,
-      image: "[Hoodie Image]"
+      price: 449.99,
+      image: "https://images.unsplash.com/photo-1507582020474-9a35b7d455d9?w=400&h=400&fit=crop"
+    },
+    {
+      id: 17,
+      name: "Gaming Mouse",
+      category: "Electronics",
+      rating: 4.7,
+      reviews: 567,
+      price: 49.99,
+      image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&h=400&fit=crop"
+    },
+    {
+      id: 18,
+      name: "Mechanical Keyboard",
+      category: "Electronics",
+      rating: 4.9,
+      reviews: 423,
+      price: 129.99,
+      image: "https://images.unsplash.com/photo-1587822057517-10453d2409c8?w=400&h=400&fit=crop"
+    },
+    {
+      id: 19,
+      name: "External SSD 1TB",
+      category: "Electronics",
+      rating: 4.8,
+      reviews: 312,
+      price: 89.99,
+      image: "https://images.unsplash.com/photo-1604152135912-04a022e23696?w=400&h=400&fit=crop"
+    },
+    {
+      id: 20,
+      name: "Smart Home Hub",
+      category: "Electronics",
+      rating: 4.5,
+      reviews: 178,
+      price: 79.99,
+      image: "https://images.unsplash.com/photo-1558089687-f282ffcbc126?w=400&h=400&fit=crop"
+    },
+    {
+      id: 21,
+      name: "Premium Leather Sneakers",
+      category: "Shoes",
+      rating: 4.8,
+      reviews: 156,
+      price: 79.99,
+      image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop"
+    },
+    {
+      id: 22,
+      name: "Running Shoes",
+      category: "Shoes",
+      rating: 4.8,
+      reviews: 312,
+      price: 99.99,
+      image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop"
+    },
+    {
+      id: 23,
+      name: "Hiking Boots",
+      category: "Shoes",
+      rating: 4.9,
+      reviews: 98,
+      price: 129.99,
+      image: "https://images.unsplash.com/photo-1520219306100-59d0f1c6e788?w=400&h=400&fit=crop"
     }
   ];
 
-  const categoryProducts = {
-    clothing: [
-      { name: "Classic White Tee", price: 19.99, rating: 4.5, reviews: 67 },
-      { name: "Slim Fit Jeans", price: 49.99, rating: 4.6, reviews: 89 },
-      { name: "Summer Dress", price: 39.99, rating: 4.7, reviews: 45 },
-    ],
-    shoes: [
-      { name: "Running Shoes", price: 89.99, rating: 4.8, reviews: 234 },
-      { name: "Casual Loafers", price: 69.99, rating: 4.6, reviews: 78 },
-      { name: "Hiking Boots", price: 129.99, rating: 4.9, reviews: 56 },
-    ],
-    kitchen: [
-      { name: "Non-Stick Pan Set", price: 79.99, rating: 4.7, reviews: 145 },
-      { name: "Chef's Knife", price: 45.99, rating: 4.8, reviews: 98 },
-      { name: "Glass Food Container", price: 24.99, rating: 4.5, reviews: 67 },
-    ],
-    electronics: [
-      { name: "Wireless Earbuds", price: 59.99, rating: 4.6, reviews: 445 },
-      { name: "Tablet Stand", price: 29.99, rating: 4.4, reviews: 123 },
-      { name: "Phone Charger", price: 19.99, rating: 4.5, reviews: 567 },
-    ]
-  };
+  const categories = [
+    { name: "Clothing", icon: "👕", color: "bg-blue-50" },
+    { name: "Shoes", icon: "👟", color: "bg-green-50" },
+    { name: "Kitchen", icon: "🍳", color: "bg-yellow-50" },
+    { name: "Electronics", icon: "📱", color: "bg-purple-50" },
+    { name: "Sports", icon: "⚽", color: "bg-red-50" },
+    { name: "Fashion", icon: "👜", color: "bg-indigo-50" },
+  ];
 
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="py-20" style={{ backgroundColor: '#fce7f3' }}>
+      <section className="bg-gradient-to-r from-sky-50 to-blue-50 py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-4 text-gray-900">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800">
             Your Personal Shopping Assistant
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
             Tell us what you're looking for, and our AI will find the perfect products 
             for you, matching your style and budget.
           </p>
-          <button
-            className="px-8 py-3 rounded-lg text-lg font-semibold hover:opacity-90 transition"
-            style={{ backgroundColor: '#7dd3fc', color: 'white' }}
-          >
+          <button className="px-6 py-3 bg-sky-500 text-white rounded-lg hover:bg-sky-600 transition shadow-sm">
             Start Chatting
           </button>
         </div>
       </section>
 
-      {/* Featured Products - Now with 6 items */}
-      <section className="py-16">
+      {/* Categories */}
+      <section className="py-8">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Featured Products</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredProducts.map((product) => (
-              <div key={product.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
-                <div className="h-48 bg-gray-200 flex items-center justify-center text-gray-400">
-                  {product.image}
-                </div>
-                <div className="p-4">
-                  <div className="flex justify-between items-start">
-                    <h3 className="font-semibold text-lg">{product.name}</h3>
-                    <span className="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">
-                      {product.category}
-                    </span>
-                  </div>
-                  <div className="flex items-center mt-1">
-                    <span className="text-green-600">🟢 {product.rating}</span>
-                    <span className="text-gray-500 ml-2">({product.reviews})</span>
-                  </div>
-                  <p className="text-xl font-bold mt-2">${product.price.toFixed(2)}</p>
-                  <button className="mt-3 w-full bg-gray-900 text-white py-2 rounded-lg hover:bg-gray-800 transition text-sm">
-                    Add to Cart
-                  </button>
-                </div>
+          <h2 className="text-2xl font-semibold mb-6">Shop by Category</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {categories.map((cat, i) => (
+              <div key={i} className={`${cat.color} rounded-lg p-4 text-center hover:shadow-md transition cursor-pointer`}>
+                <span className="text-3xl mb-2 block">{cat.icon}</span>
+                <span className="text-sm font-medium text-gray-700">{cat.name}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Category Sections */}
-      <section className="py-8 bg-gray-50">
+      {/* Featured Products */}
+      <section className="py-12">
         <div className="container mx-auto px-4">
-          {/* Clothing Section */}
-          <div className="mb-12">
-            <div className="flex justify-between items-center mb-6">
-              <h3 className="text-2xl font-semibold">👕 Clothing</h3>
-              <Link href="/categories/clothing" className="text-sm text-blue-500 hover:underline">
-                View All →
-              </Link>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {categoryProducts.clothing.map((item, index) => (
-                <div key={index} className="bg-white rounded-lg p-4 shadow hover:shadow-md transition">
-                  <div className="h-32 bg-gray-100 rounded mb-3"></div>
-                  <h4 className="font-medium">{item.name}</h4>
-                  <div className="flex items-center mt-1">
-                    <span className="text-green-600 text-sm">🟢 {item.rating}</span>
-                    <span className="text-gray-400 text-xs ml-1">({item.reviews})</span>
-                  </div>
-                  <p className="font-bold mt-1">${item.price.toFixed(2)}</p>
-                </div>
-              ))}
-            </div>
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-2xl font-semibold">Featured Products</h2>
+            <Link href="/products" className="text-sky-500 text-sm hover:underline">
+              View All →
+            </Link>
           </div>
-
-          {/* Shoes Section */}
-          <div className="mb-12">
-            <div className="flex justify-between items-center mb-6">
-              <h3 className="text-2xl font-semibold">👟 Shoes</h3>
-              <Link href="/categories/shoes" className="text-sm text-blue-500 hover:underline">
-                View All →
-              </Link>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {categoryProducts.shoes.map((item, index) => (
-                <div key={index} className="bg-white rounded-lg p-4 shadow hover:shadow-md transition">
-                  <div className="h-32 bg-gray-100 rounded mb-3"></div>
-                  <h4 className="font-medium">{item.name}</h4>
-                  <div className="flex items-center mt-1">
-                    <span className="text-green-600 text-sm">🟢 {item.rating}</span>
-                    <span className="text-gray-400 text-xs ml-1">({item.reviews})</span>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {featuredProducts.map((product) => (
+              <Link href={`/products/${product.id}`} key={product.id}>
+                <div className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer group">
+                  <div className="aspect-square bg-gray-100 overflow-hidden">
+                    <img 
+                      src={product.image} 
+                      alt={product.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                    />
                   </div>
-                  <p className="font-bold mt-1">${item.price.toFixed(2)}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Kitchen Section */}
-          <div className="mb-12">
-            <div className="flex justify-between items-center mb-6">
-              <h3 className="text-2xl font-semibold">🍳 Kitchen</h3>
-              <Link href="/categories/kitchen" className="text-sm text-blue-500 hover:underline">
-                View All →
-              </Link>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {categoryProducts.kitchen.map((item, index) => (
-                <div key={index} className="bg-white rounded-lg p-4 shadow hover:shadow-md transition">
-                  <div className="h-32 bg-gray-100 rounded mb-3"></div>
-                  <h4 className="font-medium">{item.name}</h4>
-                  <div className="flex items-center mt-1">
-                    <span className="text-green-600 text-sm">🟢 {item.rating}</span>
-                    <span className="text-gray-400 text-xs ml-1">({item.reviews})</span>
+                  <div className="p-3">
+                    <span className="text-xs text-gray-500">{product.category}</span>
+                    <h3 className="font-medium text-gray-800 text-sm mt-1">{product.name}</h3>
+                    <div className="flex items-center mt-1">
+                      <span className="text-yellow-500 text-xs">★ {product.rating}</span>
+                      <span className="text-gray-400 text-xs ml-1">({product.reviews})</span>
+                    </div>
+                    <div className="flex items-center justify-between mt-2">
+                      <span className="font-bold text-gray-900">${product.price.toFixed(2)}</span>
+                      <button className="px-2 py-1 bg-sky-500 text-white text-xs rounded hover:bg-sky-600">
+                        Add
+                      </button>
+                    </div>
                   </div>
-                  <p className="font-bold mt-1">${item.price.toFixed(2)}</p>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Electronics Section */}
-          <div className="mb-12">
-            <div className="flex justify-between items-center mb-6">
-              <h3 className="text-2xl font-semibold">📱 Electronics</h3>
-              <Link href="/categories/electronics" className="text-sm text-blue-500 hover:underline">
-                View All →
               </Link>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {categoryProducts.electronics.map((item, index) => (
-                <div key={index} className="bg-white rounded-lg p-4 shadow hover:shadow-md transition">
-                  <div className="h-32 bg-gray-100 rounded mb-3"></div>
-                  <h4 className="font-medium">{item.name}</h4>
-                  <div className="flex items-center mt-1">
-                    <span className="text-green-600 text-sm">🟢 {item.rating}</span>
-                    <span className="text-gray-400 text-xs ml-1">({item.reviews})</span>
-                  </div>
-                  <p className="font-bold mt-1">${item.price.toFixed(2)}</p>
-                </div>
-              ))}
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Chat Interface */}
-      <div className="fixed bottom-4 right-4 w-96 bg-white rounded-lg shadow-xl border border-gray-200">
-        <div className="bg-[#7dd3fc] rounded-t-lg p-3">
-          <p className="font-semibold text-white">Shopping Assistant</p>
+      {/* Chat Assistant */}
+      <div className="fixed bottom-4 right-4 w-80 bg-white rounded-lg shadow-xl border border-gray-200">
+        <div className="bg-sky-500 p-3 rounded-t-lg">
+          <p className="font-medium text-white">Shopping Assistant</p>
         </div>
-        <div className="p-4 h-80 overflow-y-auto space-y-4">
-          <div className="flex">
-            <div className="bg-gray-100 rounded-lg p-3 max-w-[80%]">
-              <p className="text-sm text-gray-800">Hi there! Looking for anything specific today?</p>
-            </div>
+        <div className="p-3 h-48 overflow-y-auto bg-gray-50">
+          <div className="bg-white rounded-lg p-2 mb-2 max-w-[85%] shadow-sm">
+            <p className="text-xs">Hi there! Looking for anything specific today?</p>
           </div>
-          <div className="flex justify-end">
-            <div className="bg-[#7dd3fc] rounded-lg p-3 max-w-[80%]">
-              <p className="text-sm text-white">I need a gift for a coffee lover, under $50.</p>
-            </div>
+          <div className="bg-sky-500 text-white rounded-lg p-2 mb-2 ml-auto max-w-[85%]">
+            <p className="text-xs">I need a gift for a coffee lover, under $50.</p>
           </div>
-          <div className="flex">
-            <div className="bg-gray-100 rounded-lg p-3 max-w-[80%]">
-              <p className="text-sm text-gray-800 mb-2">I can help with that! We have some great artisan mugs and premium beans. Want to see one?</p>
-              <div className="bg-white p-2 rounded border mt-2">
-                <p className="font-medium">Ceramic Artisan Mug</p>
-                <p className="text-green-600 text-sm">🟢 4.9 (120)</p>
-                <p className="font-bold">$24.00</p>
-              </div>
-            </div>
+          <div className="bg-white rounded-lg p-2 max-w-[85%]">
+            <p className="text-xs">I can help with that! We have some great artisan mugs.</p>
           </div>
         </div>
-        <div className="p-4 border-t">
-          <div className="flex space-x-2">
-            <input 
-              type="text" 
-              placeholder="Type your message..." 
-              className="flex-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <button className="bg-[#7dd3fc] text-white px-4 py-2 rounded-lg hover:opacity-90">
-              Send
-            </button>
-          </div>
+        <div className="p-3 border-t border-gray-100">
+          <input type="text" placeholder="Type a message..." className="w-full text-xs p-2 border border-gray-200 rounded"/>
         </div>
       </div>
     </div>
