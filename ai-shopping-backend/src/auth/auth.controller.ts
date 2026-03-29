@@ -1,8 +1,9 @@
-import { Controller, Post, Body, Get, UseGuards, Request } from '@nestjs/common';
+// backend/src/auth/auth.controller.ts
+import { Controller, Post, Body, UseGuards } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { CreateUserDto } from '../users/dto/create-user.dto';
 import { LoginDto } from '../users/dto/login.dto';
-import { JwtAuthGuard } from './guards/jwt.guard';
+import { JwtGuard } from './guards/jwt.guard'; // Changed from JwtAuthGuard to JwtGuard
 
 @Controller('auth')
 export class AuthController {
@@ -18,16 +19,9 @@ export class AuthController {
     return this.authService.login(loginDto);
   }
 
-  @Get('profile')
-  @UseGuards(JwtAuthGuard)
-  async getProfile(@Request() req) {
-    return req.user;
-  }
-
-  @Post('logout')
-  @UseGuards(JwtAuthGuard)
-  async logout() {
-    // JWT tokens are stateless, so logout is handled client-side
-    return { message: 'Logged out successfully' };
+  @Post('me')
+  @UseGuards(JwtGuard)
+  async getProfile(@Body('userId') userId: string) {
+    return this.authService.validateUser(userId);
   }
 }

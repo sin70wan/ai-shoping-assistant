@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, OneToMany } from 'typeorm';
+// backend/src/users/entities/user.entity.ts
+import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 import { Exclude } from 'class-transformer';
 
 @Entity('users')
@@ -13,11 +14,11 @@ export class User {
   name: string;
 
   @Column()
-  @Exclude() // This will exclude password from responses
+  @Exclude()
   password: string;
 
   @Column({ default: 'user' })
-  role: string; // 'user' or 'admin'
+  role: string;
 
   @Column({ nullable: true })
   avatar: string;
@@ -27,11 +28,4 @@ export class User {
 
   @UpdateDateColumn()
   updatedAt: Date;
-
-  // Relations will be added later
-  // @OneToMany(() => Cart, cart => cart.user)
-  // carts: Cart[];
-  
-  // @OneToMany(() => Order, order => order.user)
-  // orders: Order[];
 }
